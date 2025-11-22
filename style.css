@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+}
+
+:root{
+    --bg-color:#d7b9b6;
+    --second-color:#88baec;
+    --accent-color:#877b76;
+    --border-color:#060508;
+    --third-color: #f5f5dc;
+    --medium-color:#b09285;
+    --spacing: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 900;
+  position: relative;
+  }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0, 4s;
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+a:hover {
+  color: var(--third-color);
+  transition: 0, 4s;
+}
+
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+h1 span:hover {
+animation-name: title1;
+animation-duration: 3s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+}
+
+@keyframes title1 {
+  0% {
+    color: var(--accent-color);
+    box-shadow: 4px, 4px, 4px, 4px, #41413dbd;
+  }
+  35% {
+    color:var(--medium-color);
+  }
+  65% {
+    color:var(--third-color);
+  }
+  100% { color: var(--second-color);
+  }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    height: 100vh;
+    margin-top: 40px;
+}
+
+#secondary_title {
+  font-size: 36px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 20px;
+  padding: auto;
+}
+
+#secondary_title:hover {
+  animation-name: title1;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul h3 {
+  font-size: 30px;
+  text-align: center;
+}
+
+ul h3:hover {
+  animation-name: title1;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.galeria-scroll {
+  width: 800px;           
+  height: 250px;         
+  overflow-x: auto;       
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background: var(--medium-color);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.galeria-scroll img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px #0002;
+}
+
+  @media screen and (max-width: 900px) {
+    body {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .galeria-scroll {
+      width: 95vw;
+      min-width: 0;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .galeria-scroll img {
+      width: 180px;
+      height: 180px;
+    }
+
+    header {
+      flex-direction: column;
+      gap: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+
+    #secondary_title {
+      font-size: 24px;
+      flex-direction: column;
+      margin: 10px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    a {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .galeria-scroll {
+      width: 100vw;
+      padding: 5px;
+      gap: 5px;
+    }
+
+    .galeria-scroll img {
+      width: 150px;
+      height: 150px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    #secondary_title {
+      font-size: 16px;
+      align-items: center;
+    }
+
+    ul h3 {
+      font-size: 18px;
+    }
+  }
